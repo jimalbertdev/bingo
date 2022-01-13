@@ -1,0 +1,131 @@
+/**
+ * BINGO CSS
+ * Archivo en el que damos formato a las distintas divisiones y elementos de nuestra aplicaión
+ */
+ 
+.container {
+    width:60%;
+    margin:40px auto;
+    padding:20px;
+    background:#fff;
+    border:2px solid #ccc;
+    border-radius:20px;
+    box-shadow:0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    float:left;
+    font-size: 1.5rem;
+}
+
+.called {
+    float:right;
+}
+
+.called > .number {
+    display:inline-block;
+    padding:10px;
+    font-size:1em;
+    margin-left:10px;
+    background:#ccc;
+    border-radius:50%;
+    width:35px;
+    text-align:center;
+    position:relative;
+}
+
+.called > .number:before {
+    display:block;
+    width: 20px;
+    font-size:1em;
+    position:absolute;
+    left:8px;
+}
+
+.called > .number.b:before {
+    content:"B";
+}
+
+.called > .number.i:before {
+    content:"I";
+    left:0px;
+}
+
+.called > .number.n:before {
+    content:"N";
+    left:5px;
+}
+
+.called > .number.g:before {
+    content:"G";
+    left:5px;
+}
+
+.called > .number.o:before {
+    content:"O";
+    left:5px;
+}
+
+.bingo-board {
+    background:#eff;
+    padding:20px;
+    border-radius:20px;
+    clear:both;
+}
+
+.bingo-column {
+    float:left;
+    width:20%;
+}
+
+.bingo-column > .number {
+    text-align:center;
+    font-size:2em;
+    border-right:1px dashed rgba(0, 0, 0, 0.4);
+    border-bottom:1px dashed rgba(0, 0, 0, 0.4);
+    cursor:pointer;
+}
+
+.bingo-column:nth-child(5) > .number {
+    border-right:0px;
+}
+
+.bingo-column > .number:last-child {
+    border-bottom:0px;
+}
+
+.bingo-column > .letter {
+    border-bottom:2px solid #66a1b3;
+    border-right:0px;
+    margin-bottom:5px;
+}
+
+.bingo-column > .number.daubed {
+    color:transparent;
+    background:#66a1b3;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display:block;
+}
+
+button#bingo {
+    margin:10px auto;
+    display:block;
+    padding:10px;
+    font-size:1.5em;
+    font-family:'Oswald';
+    border:0px;  
+    border-radius: 5px;  
+    border:1px solid #66a1b3;
+    
+}
